@@ -1,0 +1,26 @@
+{
+    "name": "a-maintenance-page",
+    "version": "1.0.0",
+    "description": "A Node.js application that serves a single page for all routes",
+    "main": "Hamza.js",
+    "scripts": {
+      "start": "node Hamza.js"
+    },
+    "keywords": [
+      "nodejs",
+      "express",
+      "spa",
+      "single-page-application"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.18.2"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.2"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    }
+  }

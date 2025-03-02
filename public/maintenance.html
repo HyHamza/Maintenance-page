@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Temporarily Unavailable</title>
+    <!-- Load only what's needed from CDNs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Optimized CSS with modern variables and fewer animations */
+        :root {
+            --bg-gradient-start: #0f172a;
+            --bg-gradient-end: #1e293b;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --border-color: rgba(100, 116, 139, 0.3);
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+        }
+        
+        html {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            padding: 1rem;
+        }
+        
+        .maintenance-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .icon-pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            background: rgba(51, 65, 85, 0.5);
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+            background: rgba(51, 65, 85, 0.8);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+        }
+        
+        .separator {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+            margin: 2rem 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        /* Responsive improvements */
+        @media (max-width: 640px) {
+            .maintenance-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maintenance-card">
+        <div class="mb-8 text-center">
+            <svg class="w-16 h-16 mx-auto text-sky-400 icon-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+        </div>
+
+        <h1 class="text-3xl font-bold text-center mb-4 tracking-tight">
+            Service Temporarily Unavailable
+        </h1>
+
+        <p class="text-center mb-6 text-lg leading-relaxed text-slate-300">
+            We're currently performing maintenance on HTD & TalkDrove. We'll be back within <span class="font-semibold text-sky-400">24–48 hours</span>. Thank you for your patience!
+        </p>
+
+        <div class="separator"></div>
+
+        <h2 class="text-xl font-semibold text-center mb-5">
+            Stay Connected
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <a href="https://whatsapp.com/channel/0029VaNRcHSJP2199iMQ4W0l" class="social-link">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
+                </svg>
+                WhatsApp
+            </a>
+
+            <a href="https://youtube.com/@talkdrove" class="social-link">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                </svg>
+                YouTube
+            </a>
+
+            <a href="https://github.com/HyHamza" class="social-link">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+            </a>
+        </div>
+
+        <p class="text-center text-slate-400 mt-6 text-sm">
+            Our team is working diligently to bring our services back online as quickly as possible.
+        </p>
+
+        <!-- Optional countdown timer - uncomment if you want to add this feature -->
+        <!--
+        <div class="mt-6 text-center">
+            <p class="text-sm text-slate-400 mb-2">Estimated time remaining:</p>
+            <div class="inline-flex bg-slate-800/50 px-4 py-2 rounded-md">
+                <span id="countdown">--:--:--</span>
+            </div>
+        </div>
+        <script>
+            // Simple countdown timer - set your target time here
+            const targetTime = new Date();
+            targetTime.setHours(targetTime.getHours() + 36); // 36 hours from now
+            
+            function updateCountdown() {
+                const now = new Date();
+                const diff = targetTime - now;
+                
+                if (diff <= 0) {
+                    document.getElementById('countdown').textContent = "Maintenance in progress";
+                    return;
+                }
+                
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.getElementById('countdown').textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            // Update every second
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        </script>
+        -->
+    </div>
+</body>
+
+</html>
